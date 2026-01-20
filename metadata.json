@@ -1,0 +1,8 @@
+{
+  "name": "Gestor Financeiro Emocional",
+  "description": "Uma plataforma completa de gestão financeira pessoal com análise de sentimentos, rastreamento de projetos de vida e gerenciamento de parcelamentos.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
