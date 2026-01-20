@@ -27,6 +27,13 @@ export enum Emotion {
   NEUTRAL = '😐 Neutro'
 }
 
+export interface User {
+  name: string;
+  email: string;
+  picture: string;
+  accessToken: string;
+}
+
 export interface Transaction {
   id: string;
   description: string;

@@ -7,6 +7,7 @@
     <title>O Grande Ledger - Crônicas do Tesouro</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
     <script>
         tailwind.config = {
           theme: {
@@ -55,7 +56,6 @@
             flex-direction: column;
         }
 
-        /* Lombada do Livro */
         .book-spine {
             position: absolute;
             left: 50%;
@@ -106,7 +106,6 @@
             font-style: italic;
         }
 
-        /* Animação de Página */
         .page-flip {
             animation: pageFlipEffect 0.7s cubic-bezier(0.4, 0, 0.2, 1) forwards;
         }
@@ -133,7 +132,6 @@
             background: rgba(139, 0, 0, 0.05);
         }
 
-        /* Scrollbar estilo nanquim */
         ::-webkit-scrollbar { width: 10px; }
         ::-webkit-scrollbar-track { background: #e8dcc4; border-left: 1px solid rgba(0,0,0,0.05); }
         ::-webkit-scrollbar-thumb { 
@@ -142,14 +140,6 @@
             border-radius: 5px;
         }
         
-        .academy-input {
-            background-color: rgba(0, 0, 0, 0.03);
-            border: 1px solid rgba(0, 0, 0, 0.1);
-            color: #1a1a1a;
-            font-family: 'EB Garamond', serif;
-        }
-
-        /* Estilo para simular páginas de papel empilhadas nas bordas */
         .book-container::before {
             content: '';
             position: absolute;
@@ -163,11 +153,37 @@
             border-left: none;
         }
 
-        .glass-card {
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(0, 0, 0, 0.05);
-            backdrop-filter: blur(2px);
+        .wax-seal-btn {
+            background: radial-gradient(circle at center, #8b0000 0%, #4a0000 100%);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            border: 2px solid #2a0000;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.4), inset 0 2px 4px rgba(255,255,255,0.2);
+            display: flex;
+            items-center: center;
+            justify-content: center;
+            color: #e8dcc4;
+            transition: all 0.3s ease;
+            position: relative;
         }
+        
+        .wax-seal-btn:hover {
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.5);
+        }
+
+        .custom-ledger-scroll {
+            scrollbar-width: thin;
+            scrollbar-color: #2c1e14 #e8dcc4;
+        }
+
+        @keyframes pulse-gold {
+          0% { box-shadow: 0 0 0 0 rgba(139, 90, 43, 0.4); }
+          70% { box-shadow: 0 0 0 10px rgba(139, 90, 43, 0); }
+          100% { box-shadow: 0 0 0 0 rgba(139, 90, 43, 0); }
+        }
+        .pulse-sync { animation: pulse-gold 2s infinite; }
     </style>
 <script type="importmap">
 {
